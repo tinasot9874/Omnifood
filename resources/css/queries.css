@@ -1,0 +1,29 @@
+@media only screen and (max-width:1200px) {
+    .city-feature {
+        font-size: 80%;
+    }
+    .box {
+        font-size: 80%;
+    }
+    .steps-box {
+        font-size: 80%;
+    }
+    .btn-app {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        overflow: hidden;
+        background-position: center;
+    }
+    .btn-app img {
+        width: 140px;
+        height: 50px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width:1023px) {}
+
+@media only screen and (max-width:767px) {}
+
+@media only screen and (max-width:480px) {}

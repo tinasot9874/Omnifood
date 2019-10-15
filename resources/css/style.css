@@ -18,6 +18,18 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {
+    zoom: 1
+}
+
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 
 /* ----------------------------------- */
 
@@ -94,6 +106,10 @@ h3 {
     line-height: 145%;
 }
 
+.section-features .row:last-child {
+    margin-top: 40px;
+}
+
 
 /* ------------- ICONS----------- */
 
@@ -104,8 +120,38 @@ h3 {
     color: #e67e22;
 }
 
+.icon-small {
+    display: inline-block;
+    color: #e67e22;
+    font-size: 120%;
+    text-align: center;
+    line-height: 120%;
+    width: 30px;
+    vertical-align: middle;
+    margin-top: -7px;
+    margin-right: 10px;
+}
 
-/* ----------- BUTTONs -------- */
+
+/* ------------- LINKS----------- */
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: all 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/* ----------- BUTTONS -------- */
 
 .btn:link,
 .btn:visited {
@@ -206,4 +252,145 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
+}
+
+
+/*------------ MEALS-SHOWCASE -------------*/
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: all 0.5s;
+}
+
+.meal-photo img:hover,
+.meal-photo img:active {
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+
+/*------------ How It Works-------------*/
+
+.section-steps .content {
+    border: 1px solid #e67e22;
+}
+
+.steps-box:first-child {
+    text-align: center;
+    padding: 3%;
+    margin-top: 50px;
+}
+
+.steps-box:last-child {
+    padding: 3%;
+    margin-top: 80px;
+    margin-left: 0px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    display: inline-block;
+    color: #e67e22;
+    border: 2px solid;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    margin-right: 25px;
+    float: left;
+}
+
+.btn-app:link,
+.btn-app :visited {
+    border: 0;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-app {
+    margin: 0 auto;
+}
+
+
+/*------------ CITIES - PHOTO -------------*/
+
+.city-box {
+    position: relative;
+}
+
+.city-box img {
+    width: 100%;
+    height: auto;
+    transition: all 0.4s;
+    margin-bottom: 15px;
+}
+
+.city-box img:hover {
+    box-shadow: 0px 0px 15px 5px rgba(83, 83, 83, 0.5);
+}
+
+.city-title {
+    position: absolute;
+    font-weight: 700;
+    color: white;
+    font-size: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: all .5s;
+    width: fit-content;
+}
+
+.city-feature {
+    text-align: left;
+}
+
+.city:hover .city-title {
+    opacity: 1;
+    transform: translate(-50%, -150%);
 }
